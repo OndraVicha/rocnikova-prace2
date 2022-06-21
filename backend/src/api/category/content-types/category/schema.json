@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "shortname": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "histories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::history.history",
+      "inversedBy": "categories"
+    },
+    "personalities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::personality.personality",
+      "mappedBy": "Personality"
+    },
+    "geographies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::geology.geology",
+      "mappedBy": "Geographies"
+    }
+  }
+}

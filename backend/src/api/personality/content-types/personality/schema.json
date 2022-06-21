@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "personalities",
+  "info": {
+    "singularName": "personality",
+    "pluralName": "personalities",
+    "displayName": "Personality",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "info": {
+      "type": "richtext",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Personality": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "personalities"
+    },
+    "title": {
+      "type": "string"
+    },
+    "title1": {
+      "type": "string"
+    },
+    "title2": {
+      "type": "string"
+    },
+    "title3": {
+      "type": "string"
+    },
+    "title4": {
+      "type": "string"
+    },
+    "info1": {
+      "type": "richtext"
+    },
+    "info2": {
+      "type": "richtext"
+    },
+    "info3": {
+      "type": "richtext"
+    },
+    "info4": {
+      "type": "richtext"
+    }
+  }
+}

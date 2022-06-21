@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "geologies",
+  "info": {
+    "singularName": "geology",
+    "pluralName": "geologies",
+    "displayName": "Geology",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "info": {
+      "type": "richtext",
+      "required": true
+    },
+    "Geographies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "geographies"
+    },
+    "title": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

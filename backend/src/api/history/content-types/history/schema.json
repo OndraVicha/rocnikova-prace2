@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "histories",
+  "info": {
+    "singularName": "history",
+    "pluralName": "histories",
+    "displayName": "History",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "info": {
+      "type": "richtext"
+    },
+    "images": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "histories"
+    },
+    "info1": {
+      "type": "richtext"
+    },
+    "info2": {
+      "type": "richtext"
+    },
+    "info3": {
+      "type": "richtext"
+    },
+    "info4": {
+      "type": "richtext"
+    },
+    "info5": {
+      "type": "richtext"
+    },
+    "title1": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "title2": {
+      "type": "string"
+    },
+    "title3": {
+      "type": "string"
+    },
+    "title4": {
+      "type": "string"
+    },
+    "title5": {
+      "type": "string"
+    },
+    "nazev": {
+      "type": "string"
+    }
+  }
+}
